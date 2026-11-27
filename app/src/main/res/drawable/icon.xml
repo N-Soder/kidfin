@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Kidfin jellyfish (same 64-unit paths as drawJelly in ui/Theme.kt). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:fillColor="@color/night"
+        android:pathData="M0,0h64v64h-64z" />
+    <path
+        android:fillColor="@color/brand_purple"
+        android:pathData="M10,34C10,18 20,8 32,8C44,8 54,18 54,34Z" />
+    <path
+        android:pathData="M20,40V54M32,40V58M44,40V54"
+        android:strokeWidth="5"
+        android:strokeColor="@color/brand_purple"
+        android:strokeLineCap="round" />
+</vector>

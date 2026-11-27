@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Storybook night (see ui/Theme.kt). -->
+    <color name="night">#FF18161D</color>
+    <color name="brand_purple">#FFB48AE0</color>
+</resources>

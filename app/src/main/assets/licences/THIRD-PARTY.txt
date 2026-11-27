@@ -1,0 +1,14 @@
+Kidfin bundles these libraries (exact versions in gradle/libs.versions.toml):
+
+- Jellyfin Kotlin SDK (org.jellyfin.sdk) — GNU LGPL-3.0.
+  Source: https://github.com/jellyfin/jellyfin-sdk-kotlin
+  The SDK is used unmodified as a separate library. Its source, and the right to relink
+  Kidfin against a modified version of it, are available on request from the distributor.
+- AndroidX Media3, Compose, Lifecycle, Activity — Apache-2.0.
+- Coil 3 — Apache-2.0.
+- OkHttp, Okio — Apache-2.0.
+- Kotlin standard library, kotlinx.coroutines, kotlinx.serialization — Apache-2.0.
+- kotlin-logging — Apache-2.0. SLF4J (slf4j-api, slf4j-nop) — MIT.
+- Fraunces and Outfit fonts — SIL Open Font License 1.1 (see the *-OFL.txt files).
+
+Kidfin itself is licensed under GPL-3.0-or-later (see LICENSE in the source repository).

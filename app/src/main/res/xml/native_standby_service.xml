@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Least-privilege configuration: no event types subscribed, no window content,
+    no key filtering, no gestures. The service exists only to call
+    performGlobalAction(GLOBAL_ACTION_LOCK_SCREEN) when a session ends with the app on screen.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canPerformGestures="false"
+    android:canRequestFilterKeyEvents="false"
+    android:canRetrieveWindowContent="false"
+    android:description="@string/standby_service_description"
+    android:isAccessibilityTool="false"
+    android:notificationTimeout="0"
+    tools:targetApi="31" />

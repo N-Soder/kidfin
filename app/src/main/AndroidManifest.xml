@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- Jellyfin only. Cleartext HTTP is allowed because the user-entered server is often plain HTTP on a LAN;
+         the sign-in form warns. Certificates are still validated against system CAs only. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".KidFinApplication"
+        android:allowBackup="false"
+        android:banner="@drawable/banner"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KidFin"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            Exported only so the system can bind it; BIND_ACCESSIBILITY_SERVICE is a
+            signature permission held by the system alone. A parent enables it in the TV's
+            accessibility settings. It reads no window content or keys.
+        -->
+        <service
+            android:name=".platform.NativeStandbyService"
+            android:exported="true"
+            android:label="@string/standby_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/native_standby_service" />
+        </service>
+    </application>
+</manifest>

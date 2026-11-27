@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kidfin</string>
+    <string name="standby_service_label">Kidfin TV power</string>
+    <string name="standby_service_description">Turns the TV off when a Kidfin watching session ends. When the session is over, it asks Android to lock the screen, which puts the Chromecast and TV into standby. It does not read the screen, keys or any other content.</string>
+</resources>
