@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Source for docs/screenshots/hero.jpg (README header). Render at 2x:
+     Chrome headless --window-size=2560,880 --screenshot (see docs/brand/README.md). -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:F;src:url('../../app/src/main/res/font/fraunces.ttf')}
+@font-face{font-family:O;src:url('../../app/src/main/res/font/outfit.ttf')}
+html,body{margin:0;width:2560px;height:880px;overflow:hidden;background:#18161d}
+.s{width:1280px;height:440px;transform:scale(2);transform-origin:0 0;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 60% 90% at 22% 50%,#2a2236 0%,#18161d 70%)}
+.text{position:absolute;left:96px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center}
+.wm{font-family:F;font-variation-settings:'wght' 650,'SOFT' 100,'WONK' 1,'opsz' 72;font-size:128px;color:#f6efe4;letter-spacing:-.02em;line-height:1;font-feature-settings:'liga' 0;position:relative}
+.dl{position:relative;display:inline-block}
+.dl svg{position:absolute;left:50%;width:.40em;height:.40em;transform:translateX(-50%);top:-.02em}
+.tag{font-family:O;font-weight:500;font-size:27px;color:#d8cfc2;margin-top:22px;line-height:1.35;max-width:620px}
+.chips{margin-top:24px;display:flex;gap:10px}
+.chip{font-family:O;font-weight:600;font-size:16px;padding:7px 14px;border-radius:999px;border:2px solid #423d4a;color:#b3aa9c}
+.wall{position:absolute;right:-40px;top:-60px;width:620px;height:560px;transform:rotate(-8deg);display:grid;grid-template-columns:repeat(4,1fr);gap:18px;opacity:.95}
+.p{aspect-ratio:2/3;border-radius:16px;border:3px solid var(--c);background:linear-gradient(165deg,var(--a),var(--b));box-shadow:0 6px 0 var(--c);position:relative;overflow:hidden}
+.p span{position:absolute;left:10px;top:10px;right:10px;font-family:F;font-variation-settings:'wght' 750,'SOFT' 100,'opsz' 72;font-size:17px;line-height:1.05;color:#fff;text-shadow:0 1px 3px #0009}
+.p i{position:absolute;border-radius:50%;background:#ffffff40}
+.p.f{border:4px solid #f6efe4;transform:scale(1.06);box-shadow:0 10px 22px #0009;z-index:2}
+.fade{position:absolute;inset:0;background:linear-gradient(90deg,#18161d 38%,#18161dcc 52%,#18161d00 75%)}
+.jelly{position:absolute;width:46px;height:46px;opacity:.5}
+</style></head><body><div class="s">
+<div class="wall" id="wall"></div>
+<div class="fade"></div>
+<div class="text">
+  <div class="wm">K<span class="dl">ı<svg viewBox="0 0 64 64"><path d="M10 34C10 18 20 8 32 8s22 10 22 26z" fill="#b48ae0"/><g stroke="#b48ae0" stroke-width="5" stroke-linecap="round"><path d="M20 40v14M32 40v18M44 40v14"/></g></svg></span>dfin</div>
+  <div class="tag">A calm Jellyfin shelf for kids on Android&nbsp;TV.<br>Grown-ups approve what plays, and for how long.</div>
+  <div class="chips"><span class="chip">Google TV</span><span class="chip">Jellyfin 12+</span><span class="chip">Secret-move approval</span><span class="chip">GPL-3.0</span></div>
+</div>
+</div>
+<script>
+// Made-up titles, placeholder art.
+const T=[["Moon Otters","#7ec8e3","#22577a","#3a8ee6"],["The Paper Fox","#ffcf7a","#a0522d","#f2a33a"],["Captain Puddle","#9be3c3","#1e6f5c","#3fc1b1"],["Little Lighthouse","#ffe7a3","#3d5a80","#6ea6ea"],["Snail Mail","#c7a6f2","#4b2c82","#b48ae0"],["Pip & the Kites","#ffb3a7","#9c2c2c","#f07a61"],["Garden Giants","#b5e48c","#2d6a4f","#7cb342"],["Bear in a Boat","#a2d2ff","#283c86","#5b6fd1"],["Rainy Day Band","#ffd6a5","#7f4f24","#f6b955"],["Ollie's Orchard","#caffbf","#386641","#66bb6a"],["Ten Little Clouds","#e0e1ff","#4a4e9c","#8c92f0"],["Sea Biscuit Bay","#9ef0f0","#006d77","#3fc1b1"]];
+document.getElementById('wall').innerHTML=T.map((x,i)=>{let b='';for(let k=0;k<2;k++){const sz=40+((i*37+k*53)%60);b+=`<i style="width:${sz}px;height:${sz}px;left:${(i*29+k*41)%80}px;top:${70+((i*17+k*61)%90)}px"></i>`}return `<div class="p${i===5?' f':''}" style="--a:${x[1]};--b:${x[2]};--c:${x[3]}">${b}<span>${x[0]}</span></div>`}).join('');
+</script></body></html>

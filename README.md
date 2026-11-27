@@ -1,3 +1,22 @@
+<p align="center">
+  <img src="docs/screenshots/hero.jpg" alt="Kidfin: a calm Jellyfin shelf for kids on Android TV. Grown-ups approve what plays, and for how long." width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/N-Soder/kidfin/actions/workflows/ci.yml"><img src="https://github.com/N-Soder/kidfin/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/licence-GPL--3.0-b48ae0" alt="Licence: GPL-3.0"></a>
+  <img src="https://img.shields.io/badge/Android%20TV-9%2B-3fc1b1" alt="Android TV 9+">
+  <img src="https://img.shields.io/badge/Jellyfin-12.0%2B-6ea6ea" alt="Jellyfin 12.0+">
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> ·
+  <a href="#setup">Setup</a> ·
+  <a href="#keeping-children-in-kidfin">Keeping children in Kidfin</a> ·
+  <a href="#build">Build</a> ·
+  <a href="docs/decisions.md">Design notes</a>
+</p>
+
 # Kidfin
 
 Kidfin is a children's front end for [Jellyfin](https://jellyfin.org) on Android TV and Google TV.

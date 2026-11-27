@@ -19,3 +19,12 @@ sips -z 180 320 $R/drawable-xxhdpi/banner.png --out $R/drawable-mdpi/banner.png
 
 Fonts: Fraunces and Outfit variable TTFs from github.com/google/fonts (OFL 1.1); licences ship in
 the APK under `assets/licences/`.
+
+README header (`docs/screenshots/hero.jpg`, made-up titles, no third-party art):
+
+```sh
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+  --allow-file-access-from-files --window-size=2560,880 \
+  --screenshot=hero.png "file://$PWD/docs/brand/readme-hero.html"
+sips -s format jpeg -s formatOptions 88 hero.png --out docs/screenshots/hero.jpg && rm hero.png
+```
